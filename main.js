@@ -127,4 +127,4 @@ const getUsername = () => {
 }
 
 let usernameEl = document.getElementsByClassName('user-name')[0];
-usernameEl.textContent = getUsername();
+usernameEl.textContent = "@" + getUsername();
