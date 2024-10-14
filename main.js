@@ -126,5 +126,5 @@ const getUsername = () => {
     return user.username;
 }
 
-let usernameEl = document.getElementById('username');
+let usernameEl = document.getElementsByClassName('user-name')[0];
 usernameEl.textContent = getUsername();
