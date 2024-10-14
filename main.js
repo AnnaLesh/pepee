@@ -119,7 +119,12 @@ async function tap(userId) {
     }
 }
 
-const main = () => {
-    fetchUser(1)
+const app = window.Telegram.WebApp;
+const user = app.initDataUnsafe.user;
+
+const getUsername = () => {
+    return user.username;
 }
-main()
+
+let usernameEl = document.getElementById('username');
+usernameEl.textContent = getUsername();
