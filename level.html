@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="level.css">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div>
+                <a href="tup.html"><svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.5 41.6562C17.5135 41.6562 13.6165 40.4741 10.3018 38.2593C6.98712 36.0445 4.40364 32.8965 2.87806 29.2135C1.35248 25.5304 0.953322 21.4776 1.73106 17.5677C2.50879 13.6578 4.42849 10.0663 7.24739 7.24737C10.0663 4.42847 13.6578 2.50877 17.5677 1.73104C21.4776 0.953307 25.5304 1.35247 29.2135 2.87805C32.8965 4.40363 36.0445 6.9871 38.2593 10.3018C40.4741 13.6165 41.6563 17.5135 41.6563 21.5C41.6563 26.8458 39.5327 31.9726 35.7526 35.7526C31.9726 39.5326 26.8458 41.6562 21.5 41.6562ZM21.5 4.03124C18.045 4.03124 14.6676 5.05577 11.7949 6.97526C8.92217 8.89475 6.68316 11.623 5.36099 14.815C4.03882 18.007 3.69288 21.5194 4.36692 24.908C5.04095 28.2966 6.70469 31.4092 9.14774 33.8523C11.5908 36.2953 14.7034 37.9591 18.092 38.6331C21.4806 39.3071 24.993 38.9612 28.185 37.639C31.377 36.3168 34.1053 34.0778 36.0247 31.2051C37.9442 28.3324 38.9688 24.955 38.9688 21.5C38.9688 16.867 37.1283 12.4237 33.8523 9.14772C30.5763 5.8717 26.133 4.03124 21.5 4.03124Z" fill="#BEDCFF"/>
+                    <path d="M26.0687 30.6375L15.3187 22.575C15.1519 22.4498 15.0164 22.2875 14.9231 22.1009C14.8298 21.9143 14.7812 21.7086 14.7812 21.5C14.7812 21.2914 14.8298 21.0856 14.9231 20.899C15.0164 20.7125 15.1519 20.5502 15.3187 20.425L26.0687 12.3625L27.6813 14.5125L18.3691 21.5L27.6813 28.4875L26.0687 30.6375Z" fill="#BEDCFF"/>
+                    </svg></a>
+                
+            </div>
+            <p class="user-name">@cactuus_lover <img class="user-avatar" src="img/user-avatar.jpg" alt=""></p>
+        </div>
+        <div class="main-wrapper">
+            <div class="arrow" id="prevArrow">
+                <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="#BEDCFF"></path></g></svg>
+            </div>
+            <div class="level-card">
+                <img src="img/levels/first-level.png" alt="" width="100px">
+            </div>
+            <div class="arrow" id="nextArrow">
+                <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" fill="#BEDCFF"></path></g></svg>
+            </div>
+            
+        </div>
+        
+        <div class="loader">
+            <div class="progress" style="width: 70%;"></div> <!-- Задайте нужный процент -->
+        </div>
+        <p class="level-name">
+            second level - cockatiel
+        </p>
+        <footer class="buttons">
+            <div class="nav-button"><img src="img/user.png" alt=""></div>
+            <div class="nav-button"><img src="img/user.png" alt=""></div>
+            <div class="nav-button"><img src="img/user.png" alt=""></div>
+        </footer>
+    </div>
+
+    <script src="level.js"></script>
+    // Подключаем библиотеку SQL.js
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/sql-wasm.js"></script>
+
+    <script>
+    // Инициализируем и создаём базу данных в памяти
+    initSqlJs({ locateFile: filename => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/${filename}` })
+    .then(SQL => {
+        let db = new SQL.Database(); // Создаём виртуальную базу данных
+        db.exec("CREATE TABLE test (col1, col2); INSERT INTO test VALUES (1,111), (2,222);"); // Заполняем таблицу тестовыми данными
+        let stmt = db.prepare("SELECT * FROM test WHERE col1 = ?"); // Готовим запрос на выборку данных по значению в первом столбце
+        console.log(stmt.getAsObject({$col1:1})); // Выводим результат запроса в консоль
+        stmt.free(); // Освобождаем ресурсы после выполнения запроса
+    });
+    </script>
+</body>
+</html>

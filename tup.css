@@ -1,0 +1,126 @@
+body{
+    background: linear-gradient(156deg, rgba(33,33,136,1) 0%, rgba(58,58,238,1) 100%);
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.wrapper{
+    padding: 50px;
+
+}
+
+.user-name{
+    margin: 0;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+    font-family: "Madimi One";
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0 0 68PX 0;
+}
+
+.user-avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.title{
+    color: #FFFFFF;
+    font-family: "Madimi One";
+    text-align: center;
+    margin: 0 0 21px 0;
+}
+
+.user-balance{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    color: #FFD500;
+    font-family: "Madimi One";
+    margin: 0;
+   
+}
+
+.tap{
+    width: 226px;
+    height: 226px;
+    background-color: #FFF891;
+    border: 10px solid #BEDCFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 136px auto;
+}
+
+
+.tap img{
+    width: 164px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button{
+    width: 60px;
+    height: 60px;
+    background-color: #BEDCFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.nav-button img{
+    width: 40px;
+}
+
+.tap img {
+    transition: transform 0.3s ease;
+}
+
+.flying-image {
+    position: absolute;
+    width: 30px; /* Размер вылетающей картинки */
+    animation: fly 0.8s forwards;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px); /* Высота, на которую будет подниматься картинка */
+        opacity: 0; /* Уменьшение прозрачности */
+    }
+}
+
+.user-money{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 26px 0;
+    justify-content: center;
+    
+}
+
+.slash{
+    font-family: "Madimi One";
+    color: #FFF891;
+}
+
+.money-at-hour{
+    margin: 0;
+    color: #FFD500;
+    font-family: "Madimi One";
+
+    
+}

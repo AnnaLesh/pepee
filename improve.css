@@ -1,0 +1,121 @@
+body{
+    background: linear-gradient(156deg, rgba(33,33,136,1) 0%, rgba(58,58,238,1) 100%);
+    overflow-x: hidden;
+}
+
+.wrapper{
+    padding: 50px;
+}
+
+.user-name{
+    margin: 0;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Madimi One";
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0;
+}
+
+.user-avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+}
+
+.title{
+    font-family: "Madimi One";
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.category{
+    font-family: "Madimi One";
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.task-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(156deg, rgba(255,235,172,1) 0%, rgba(255,174,0,1) 100%);
+    border-radius: 20px;
+    margin: 0 0 25px 0;
+}
+
+.card-name{
+    margin: 0;
+    font-family: "Madimi One";
+    font-size: 24px;
+    margin: 0;
+}
+
+.price{
+    font-family: "Madimi One";
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+}
+
+.payment{
+    font-family: "Madimi One";
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+}
+
+.task-card {
+    cursor: pointer;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+    padding: 15px;
+}
+
+.modal-content {
+    background-image: url(img/image.png);
+    background-repeat: no-repeat;
+    block-size: cover;
+    padding: 20px;
+    text-align: center;
+
+    
+}
+
+.modal-title, .modal-subtitle{
+    color: white;
+    font-family: "Madimi One";
+}
+
+.buyButton{
+    border: none;
+    background-color: #FFF891;
+    font-family: "Madimi One";
+    padding: 5px;
+    width: 70px;
+    border-radius: 25px;
+}

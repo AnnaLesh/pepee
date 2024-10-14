@@ -1,0 +1,110 @@
+body{
+    background: linear-gradient(156deg, rgba(33,33,136,1) 0%, rgba(58,58,238,1) 100%);
+    overflow-x: hidden;
+}
+
+.wrapper{
+    padding: 50px;
+}
+
+.user-name{
+    margin: 0;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Madimi One";
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0;
+}
+
+.user-avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 50px 0;
+}
+
+.level-card{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex; /* Центрирование содержимого */
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+    background-color: #FFF891; /* Фоновый цвет */
+    border: 10px solid transparent; /* Прозрачная рамка */
+    background-image: linear-gradient(#FFF891, #FFF891), linear-gradient(135deg, #FFAE00, #F2D98B); /* Градиент */
+    background-clip: padding-box, border-box;
+    margin: 0 0 30px 0;
+}
+
+
+.loader {
+    width: 80%;
+    max-width: 300px;
+    height: 30px;
+    background-color: #FFF891;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto 32px auto;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 15px;
+    background-color: #FFD500;
+}
+
+.level-name{
+    font-family: "Madimi One";
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 80px 0;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button{
+    width: 60px;
+    height: 60px;
+    background-color: #BEDCFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.nav-button img{
+    width: 40px;
+}
+
+.arrow{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.main-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    
+
+}
+
+.level-card {
+    
+    transition: transform 0.5s ease;}
